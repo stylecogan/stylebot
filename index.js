@@ -45,7 +45,7 @@ lolcatjs.options.colors = true;
 
 const start = async (tobz = new Client()) => {
         console.log('------------------------------------------------')
-        lolcatjs.fromString(color(figlet.textSync('ELAINA BOT', { horizontalLayout: 'full' })))
+        lolcatjs.fromString(color(figlet.textSync('stylebot', { horizontalLayout: 'full' })))
         console.log('------------------------------------------------')
         lolcatjs.fromString('[DEV] TOBZ')
         lolcatjs.fromString('[SERVER] Server Started!')
@@ -82,7 +82,7 @@ const start = async (tobz = new Client()) => {
                 const groups = await tobz.getAllGroups()
                 // BOT group count less than
                 if(groups.length > groupLimit){
-                    await tobz.sendText(chat.id, 'Maaf, Batas group yang dapat Elaina tampung sudah penuh').then(async () =>{
+                    await tobz.sendText(chat.id, 'Maaf, Batas group yang dapat stylebot tampung sudah penuh').then(async () =>{
                         tobz.deleteChat(chat.id)
                         tobz.leaveGroup(chat.id)
                     })
@@ -93,11 +93,11 @@ const start = async (tobz = new Client()) => {
                             tobz.leaveGroup(chat.id)
                         })
                     }else{
-                        if(!chat.isReadOnly) tobz.sendText(chat.id, 'Halo aku Elaina, Ketik #help Untuk Melihat List Command Ku...')
+                        if(!chat.isReadOnly) tobz.sendText(chat.id, 'Halo aku stylebot, Ketik #help Untuk Melihat List Command Ku...')
                     }
                 }
             }else{
-                await tobz.sendText(chat.id, 'Elaina sedang maintenance, coba lain hari').then(async () => {
+                await tobz.sendText(chat.id, 'style sedang maintenance, coba lain hari').then(async () => {
                     tobz.deleteChat(chat.id)
                     tobz.leaveGroup(chat.id)
                 })
